@@ -9,15 +9,15 @@ public class Potion : Sobi
     {   
         switch(this.gameObject.name)
         {
-            case "»ç°ú(Clone)":
-                this.gameObject.name="»ç°ú";
+            case "ì‚¬ê³¼(Clone)":
+                this.gameObject.name="ì‚¬ê³¼";
 
                 break;
-            case "¶±(Clone)":
-                this.gameObject.name="¶±";
+            case "ë–¡(Clone)":
+                this.gameObject.name="ë–¡";
                 break;
-            case "¾à°ú(Clone)":
-                this.gameObject.name="¾à°ú";
+            case "ì•½ê³¼(Clone)":
+                this.gameObject.name="ì•½ê³¼";
                 break;   
         }
 

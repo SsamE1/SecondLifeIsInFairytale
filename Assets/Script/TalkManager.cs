@@ -20,7 +20,7 @@ public class TalkManager : MonoBehaviour
     }
     private void Start()
     {
-        StartCoroutine(FadeIn());                     //ÄÚ·çÆ¾    //ÆÇ³Ú Åõ¸íµµ Á¶Àý
+        StartCoroutine(FadeIn());                     //ï¿½Ú·ï¿½Æ¾    //ï¿½Ç³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         talkText = textBox.GetComponentInChildren<Text>();
         textBox.gameObject.SetActive(false);
         moveAble = false;
@@ -34,57 +34,57 @@ public class TalkManager : MonoBehaviour
         {
             if (playerscanner.ScanObj().gameObject.CompareTag("Npc"))
             {
-                Debug.Log("NPC¿Í ´ëÈ­");
+                Debug.Log("NPCï¿½ï¿½ ï¿½ï¿½È­");
                 TalkWithNPC();
             }
             else if (playerscanner.ScanObj().gameObject.CompareTag("1PageIntro"))
             {
-                //1Æ÷Å»ÀÏ¶§
+                //1ï¿½ï¿½Å»ï¿½Ï¶ï¿½
                 Move1PageIntro();
                 StartCoroutine(FadeIn());
             }
             else if (playerscanner.ScanObj().gameObject.CompareTag("2PageIntro"))
             {
-                //2Æ÷Å»ÀÏ¶§
+                //2ï¿½ï¿½Å»ï¿½Ï¶ï¿½
                 Move2PageIntro();
                 StartCoroutine(FadeIn());
             }
             else if (playerscanner.ScanObj().gameObject.CompareTag("3PageIntro"))
             {
-                //3Æ÷Å»ÀÏ¶§
+                //3ï¿½ï¿½Å»ï¿½Ï¶ï¿½
                 Move3PageIntro();
                 StartCoroutine(FadeIn());
             }
             else if (playerscanner.ScanObj().gameObject.CompareTag("1Page"))
             {
-                //1Æ÷Å»ÀÏ¶§
+                //1ï¿½ï¿½Å»ï¿½Ï¶ï¿½
                 Move1Page();
                 StartCoroutine(FadeIn());
             }
             else if (playerscanner.ScanObj().gameObject.CompareTag("2Page"))
             {
-                //2Æ÷Å»ÀÏ¶§
+                //2ï¿½ï¿½Å»ï¿½Ï¶ï¿½
                 Move2Page();
                 StartCoroutine(FadeIn());
             }
             else if (playerscanner.ScanObj().gameObject.CompareTag("3Page"))
             {
-                //3Æ÷Å»ÀÏ¶§
+                //3ï¿½ï¿½Å»ï¿½Ï¶ï¿½
                 Move3Page();
                 StartCoroutine(FadeIn());
             }
             else if (playerscanner.ScanObj().gameObject.CompareTag("Ending"))
             {
-                //¿£µùÆ÷Å»ÀÏ¶§
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å»ï¿½Ï¶ï¿½
                 MoveEnding();
                 StartCoroutine(FadeIn());
             }
             else if (playerscanner.ScanObj().gameObject.CompareTag("Portal"))
             {
-                //±×³É Æ÷Å»ÀÏ¶§
+                //ï¿½×³ï¿½ ï¿½ï¿½Å»ï¿½Ï¶ï¿½
                 mapController.MapChange();
                 PlayerPrefs.SetInt("CurrentVerse", PlayerPrefs.GetInt("CurrentVerse") + 1);
-                //chapterText.text = PlayerPrefs.GetInt("CurrentChapter").ToString() + "Àå" + PlayerPrefs.GetInt("CurrentVerse").ToString() + "Àý";
+                //chapterText.text = PlayerPrefs.GetInt("CurrentChapter").ToString() + "ï¿½ï¿½" + PlayerPrefs.GetInt("CurrentVerse").ToString() + "ï¿½ï¿½";
                 StartCoroutine(FadeIn());
                 //MovePortal();
             }
@@ -96,46 +96,46 @@ public class TalkManager : MonoBehaviour
         PlayerPrefs.SetInt("CurrentChapter", 1);
         PlayerPrefs.SetInt("CurrentVerse", 1);
         moveAble = false;
-        SceneManager.LoadScene("1Àå½ÃÀÛ");
+        SceneManager.LoadScene("1ìž¥ì‹œìž‘");
     }
     public void Move2PageIntro()
     {
         PlayerPrefs.SetInt("CurrentChapter", 2);
         PlayerPrefs.SetInt("CurrentVerse", 1);
         moveAble = false;
-        SceneManager.LoadScene("2Àå½ÃÀÛ");
+        SceneManager.LoadScene("2ìž¥ì‹œìž‘");
     }
     public void Move3PageIntro()
     {
         PlayerPrefs.SetInt("CurrentChapter", 3);
         PlayerPrefs.SetInt("CurrentVerse", 1);
         moveAble = false;
-        SceneManager.LoadScene("3Àå½ÃÀÛ");
+        SceneManager.LoadScene("3ìž¥ì‹œìž‘");
     }
     public void Move1Page()
     {
         PlayerPrefs.SetInt("CurrentChapter", 1);
         PlayerPrefs.SetInt("CurrentVerse", 1);
         moveAble = false;
-        SceneManager.LoadScene("1Àå");
+        SceneManager.LoadScene("1ìž¥");
     }
     public void Move2Page()
     {
         PlayerPrefs.SetInt("CurrentChapter", 2);
         PlayerPrefs.SetInt("CurrentVerse", 1);
         moveAble = false;
-        SceneManager.LoadScene("2Àå");
+        SceneManager.LoadScene("2ìž¥");
     }
     public void Move3Page()
     {
         PlayerPrefs.SetInt("CurrentChapter", 3);
         PlayerPrefs.SetInt("CurrentVerse", 1);
         moveAble = false;
-        SceneManager.LoadScene("3Àå");
+        SceneManager.LoadScene("3ìž¥");
     }
     public void MoveEnding()
     {
-        SceneManager.LoadScene("¸¶Áö¸·");
+        SceneManager.LoadScene("ì—”ë”©");
         Player.instance.gameObject.SetActive(false);
         Canvas.instance.gameObject.SetActive(false);
     }
@@ -143,19 +143,19 @@ public class TalkManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         StartCoroutine(FadeIn());
-        Debug.Log("»õ·Î¿î ¾ÀÀÌ ·ÎµåµÇ¾ú½À´Ï´Ù: " + scene.name);
+        Debug.Log("ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½: " + scene.name);
         mapController = GameObject.FindGameObjectWithTag("MapController").GetComponent<MapController>();
     }
     IEnumerator FadeIn()
     {
-        // ¸Ê ÁøÀÔ½Ã ¶ß´Â UI °ü¸®
-        if (SceneManager.GetActiveScene().name == "¸¶À»" || SceneManager.GetActiveScene().name == "½ÃÀÛ")
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½Ô½ï¿½ ï¿½ß´ï¿½ UI ï¿½ï¿½ï¿½ï¿½
+        if (SceneManager.GetActiveScene().name == "ï¿½ï¿½ï¿½ï¿½" || SceneManager.GetActiveScene().name == "ï¿½ï¿½ï¿½ï¿½")
         {
             //chapterText.text = SceneManager.GetActiveScene().name;
         }
         else
         {
-            //chapterText.text = SceneManager.GetActiveScene().name + PlayerPrefs.GetInt("CurrentVerse").ToString() + "Àý";
+            //chapterText.text = SceneManager.GetActiveScene().name + PlayerPrefs.GetInt("CurrentVerse").ToString() + "ï¿½ï¿½";
         }
 
         fade.gameObject.SetActive(true);

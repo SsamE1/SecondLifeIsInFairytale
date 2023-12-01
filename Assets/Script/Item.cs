@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 
 public class Item : MonoBehaviour
@@ -109,6 +109,16 @@ public class Item : MonoBehaviour
             ItemStatus.SetActive(false);
         }*/;   
     }
+    //수정2 씬 로드 떄 템 없어지게
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
+        if (this.gameObject.transform.parent == null)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     protected void OnEnable()
     {
         StartCoroutine(MoveUpDown());

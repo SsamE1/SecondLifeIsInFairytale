@@ -8,10 +8,10 @@ public class Accessory : Item
    
    public void Start()
    {
-        if(this.gameObject.name== "Â¤½Å(Clone)") this.gameObject.name="Â¤½Å";
-        else if(this.gameObject.name== "ÆÐ·©ÀÌ(Clone)") this.gameObject.name="ÆÐ·©ÀÌ";
-        else if(this.gameObject.name== "±ºÈ­(Clone)") this.gameObject.name="±ºÈ­";
-        else if(this.gameObject.name== "¾ç¹Ý°«(Clone)") this.gameObject.name="¾ç¹Ý°«";
+        if(this.gameObject.name== "Â¤ï¿½ï¿½(Clone)") this.gameObject.name="Â¤ï¿½ï¿½";
+        else if(this.gameObject.name== "ï¿½Ð·ï¿½ï¿½ï¿½(Clone)") this.gameObject.name="ï¿½Ð·ï¿½ï¿½ï¿½";
+        else if(this.gameObject.name== "ï¿½ï¿½È­(Clone)") this.gameObject.name="ï¿½ï¿½È­";
+        else if(this.gameObject.name== "ï¿½ï¿½Ý°ï¿½(Clone)") this.gameObject.name="ï¿½ï¿½Ý°ï¿½";
    }
     public void EqipAcc(GameObject Accessory)
     {
@@ -26,7 +26,8 @@ public class Accessory : Item
     public void RemoveAcc(GameObject Accessory)
     {
         player.MAXHP-=accessoryData.maxHp;
-        player.HP=player.MAXHP;
+        //ìˆ˜ì •1. ì•…ì„¸ë³€ê²½ ë•Œ ìžê¾¸ í’€í”¼ëŒ
+        if(player.HP>player.MAXHP)player.HP=player.MAXHP;
         player.moveSpeed-=accessoryData.moveSpeed;
         player.damage-=accessoryData.damage;
         player.attackSpeed-=accessoryData.attackSpeed;

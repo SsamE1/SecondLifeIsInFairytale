@@ -186,7 +186,8 @@ public class InventoryManager : MonoBehaviour
                 accessorys[1]=NewAccessory;              
                 newAcc.EqipAcc(NewAccessory);
                 oldAcc.RemoveAcc(OldAcc);
-                Bag.AcquireItem(newAcc.accessoryData,3);
+                //수정3. 악세서리 교체 시 1번으로 교체되는현상 수정
+                Bag.AcquireItem(newAcc.accessoryData,4);
                 /*
                 for(int i=0;i<4;i++)
                 {
